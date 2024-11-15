@@ -11,9 +11,9 @@ public class ChickenSpawner : MonoBehaviour
         if (Input.anyKeyDown)
         {
             int randomIndex = Random.Range(0, myObjects.Length);
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(0, 12), 5, Random.Range(0, 14));
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-2, 2), 1, Random.Range(12, 16));
 
             Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
-        }    
+        }
     }
 }
