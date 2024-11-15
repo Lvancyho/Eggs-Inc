@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChickenScript : MonoBehaviour
+public class ChickenScript : Subject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Vector3 targetPosition;
+    public float speed = 10;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 }
